@@ -7,14 +7,16 @@
     "backend"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace=aiilp-backend\" \"npm run dev --workspace=aiilp-frontend\"",
-    "build": "npm run build --workspace=aiilp-frontend",
-    "vercel-build": "npm run build --workspace=aiilp-frontend",
+    "dev": "concurrently \"npm run dev -w ./backend\" \"npm run dev -w ./frontend\"",
+    "build": "npm run build --prefix frontend && cp -r frontend/dist ./dist",
+    "vercel-build": "npm run build --prefix frontend && rsync -a frontend/dist/ ./dist/",
     "install-all": "npm install"
+  },
+  "dependencies": {
+    "vite": "^4.5.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "cross-env": "^7.0.3",
-    "vite": "^4.5.0"
+    "cross-env": "^7.0.3"
   }
 }
