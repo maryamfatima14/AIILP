@@ -1,7 +1,7 @@
 {
-  "name": "aiilp-root",
+  "name": "aiilp-platform",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "workspaces": [
     "frontend",
     "backend"
@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev -w ./backend\" \"npm run dev -w ./frontend\"",
     "build": "npm run build --prefix frontend",
+    "vercel-build": "npm run build --prefix frontend",
     "install-all": "npm install"
   },
   "dependencies": {
