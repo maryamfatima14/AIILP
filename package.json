@@ -12,6 +12,7 @@
     "install-all": "npm install"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "vite": "^4.5.0"
   }
 }
