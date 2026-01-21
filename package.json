@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w ./backend\" \"npm run dev -w ./frontend\"",
-    "build": "npm run build --prefix frontend && cp -r frontend/dist ./dist",
-    "vercel-build": "npm run build --prefix frontend && mkdir -p dist && cp -rv frontend/dist/* dist/",
+    "build": "npm run build --prefix frontend",
     "install-all": "npm install"
   },
   "dependencies": {
