@@ -7,8 +7,8 @@
     "backend"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-    "build": "npm run build --prefix frontend",
+    "dev": "concurrently \"npm run dev -w aiilp-backend\" \"npm run dev -w aiilp-frontend\"",
+    "build": "npm run build -w aiilp-frontend",
     "install-all": "npm install"
   },
   "devDependencies": {
