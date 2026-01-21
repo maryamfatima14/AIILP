@@ -38,5 +38,8 @@ export default defineConfig({
         rewrite: (path) => path,
       },
     },
+  },
+  build: {
+    chunkSizeWarningLimit: 1600,
   }
 })
