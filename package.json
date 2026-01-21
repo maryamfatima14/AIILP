@@ -2,10 +2,14 @@
   "name": "aiilp-root",
   "private": true,
   "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
-    "build": "npm run build --prefix frontend",
-    "install-all": "npm install && npm install --prefix frontend && npm install --prefix backend"
+    "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "install-all": "npm install"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
